@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="d1ec2z" name="delay" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="io.marcjones.delay" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="0" buildAU="1" buildRTAS="0" buildAAX="0"
+              pluginName="delay" pluginDesc="delay" pluginManufacturer="Jones Corp"
+              pluginManufacturerCode="mjIO" pluginCode="dLay" pluginChannelConfigs=""
+              pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
+              pluginIsMidiEffectPlugin="0" pluginSilenceInIsSilenceOut="0"
+              pluginEditorRequiresKeys="0" pluginAUExportPrefix="delayAU" pluginRTASCategory=""
+              aaxIdentifier="com.yourcompany.delay" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
+              jucerVersion="4.1.0" companyName="Jones Corp" companyWebsite="marcjones.io"
+              companyEmail="contact@marcjones.io">
+  <MAINGROUP id="wT4FNs" name="delay">
+    <GROUP id="{8A8C27AC-6EF6-5DFB-1692-6BC08721751A}" name="Source">
+      <GROUP id="{81323234-3DB9-2717-73E6-2DDE66DD72C3}" name="provided">
+        <FILE id="TczDlU" name="Mu45FilterCalc.cpp" compile="1" resource="0"
+              file="../../provided/Mu45FilterCalc.cpp"/>
+        <FILE id="pkZoGv" name="Mu45FilterCalc.h" compile="0" resource="0"
+              file="../../provided/Mu45FilterCalc.h"/>
+        <FILE id="fnM7Q1" name="PluginParameter.h" compile="0" resource="0"
+              file="../../provided/PluginParameter.h"/>
+      </GROUP>
+      <GROUP id="{E4E0F5A3-34A6-9D33-66F9-D850B7A398E1}" name="stk">
+        <GROUP id="{EBC63C88-4AA5-FBD2-89FB-6D668CFE817F}" name="include">
+          <FILE id="QuYDdt" name="BiQuad.h" compile="0" resource="0" file="../../stk/include/BiQuad.h"/>
+          <FILE id="V8qv92" name="Delay.h" compile="0" resource="0" file="../../stk/include/Delay.h"/>
+          <FILE id="XmVupu" name="DelayA.h" compile="0" resource="0" file="../../stk/include/DelayA.h"/>
+          <FILE id="GcgjHe" name="DelayL.h" compile="0" resource="0" file="../../stk/include/DelayL.h"/>
+          <FILE id="TlAJ5s" name="Filter.h" compile="0" resource="0" file="../../stk/include/Filter.h"/>
+          <FILE id="vp46RQ" name="Fir.h" compile="0" resource="0" file="../../stk/include/Fir.h"/>
+          <FILE id="DetboR" name="FormSwep.h" compile="0" resource="0" file="../../stk/include/FormSwep.h"/>
+          <FILE id="DQsUIs" name="Iir.h" compile="0" resource="0" file="../../stk/include/Iir.h"/>
+          <FILE id="tH1vXj" name="OnePole.h" compile="0" resource="0" file="../../stk/include/OnePole.h"/>
+          <FILE id="RHbn0j" name="OneZero.h" compile="0" resource="0" file="../../stk/include/OneZero.h"/>
+          <FILE id="mj3seF" name="PoleZero.h" compile="0" resource="0" file="../../stk/include/PoleZero.h"/>
+          <FILE id="Mr90XT" name="Stk.h" compile="0" resource="0" file="../../stk/include/Stk.h"/>
+          <FILE id="xzxpkV" name="TapDelay.h" compile="0" resource="0" file="../../stk/include/TapDelay.h"/>
+          <FILE id="BLnoWA" name="TwoPole.h" compile="0" resource="0" file="../../stk/include/TwoPole.h"/>
+          <FILE id="cFigGr" name="TwoZero.h" compile="0" resource="0" file="../../stk/include/TwoZero.h"/>
+        </GROUP>
+        <GROUP id="{826648A0-24DE-E5CE-F528-9AE7BEBDB1B6}" name="src">
+          <FILE id="Xtil1D" name="BiQuad.cpp" compile="1" resource="0" file="../../stk/src/BiQuad.cpp"/>
+          <FILE id="qL4D6g" name="Delay.cpp" compile="1" resource="0" file="../../stk/src/Delay.cpp"/>
+          <FILE id="n8dTZK" name="DelayA.cpp" compile="1" resource="0" file="../../stk/src/DelayA.cpp"/>
+          <FILE id="Blu7mi" name="DelayL.cpp" compile="1" resource="0" file="../../stk/src/DelayL.cpp"/>
+          <FILE id="oOhQ9q" name="Fir.cpp" compile="1" resource="0" file="../../stk/src/Fir.cpp"/>
+          <FILE id="v3sUne" name="FormSwep.cpp" compile="1" resource="0" file="../../stk/src/FormSwep.cpp"/>
+          <FILE id="vcRCxW" name="Iir.cpp" compile="1" resource="0" file="../../stk/src/Iir.cpp"/>
+          <FILE id="rYBufi" name="OnePole.cpp" compile="1" resource="0" file="../../stk/src/OnePole.cpp"/>
+          <FILE id="bYd7Uz" name="OneZero.cpp" compile="1" resource="0" file="../../stk/src/OneZero.cpp"/>
+          <FILE id="BWXd1G" name="PoleZero.cpp" compile="1" resource="0" file="../../stk/src/PoleZero.cpp"/>
+          <FILE id="gdFcUm" name="Stk.cpp" compile="1" resource="0" file="../../stk/src/Stk.cpp"/>
+          <FILE id="ccNb0S" name="TapDelay.cpp" compile="1" resource="0" file="../../stk/src/TapDelay.cpp"/>
+          <FILE id="c02lyd" name="TwoPole.cpp" compile="1" resource="0" file="../../stk/src/TwoPole.cpp"/>
+          <FILE id="ZeOtkJ" name="TwoZero.cpp" compile="1" resource="0" file="../../stk/src/TwoZero.cpp"/>
+        </GROUP>
+      </GROUP>
+      <FILE id="LyriTo" name="GUI.cpp" compile="1" resource="0" file="Source/GUI.cpp"/>
+      <FILE id="AIAa5H" name="GUI.h" compile="0" resource="0" file="Source/GUI.h"/>
+      <FILE id="IVgWaH" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="rRwnGz" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="AIds1I" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="mBrxAF" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" postbuildCommand="&#13;&#10;# This script takes the build product and copies it to the AU, VST, VST3, RTAS and AAX folders, depending on &#13;&#10;# which plugin types you've built&#13;&#10;&#13;&#10;original=$CONFIGURATION_BUILD_DIR/$FULL_PRODUCT_NAME&#13;&#10;&#13;&#10;# this looks inside the binary to detect which platforms are needed.. &#13;&#10;copyAU=&#96;nm -g &quot;$CONFIGURATION_BUILD_DIR/$EXECUTABLE_PATH&quot; | grep -i 'AudioUnit' | wc -l&#96;&#13;&#10;copyVST=&#96;nm -g &quot;$CONFIGURATION_BUILD_DIR/$EXECUTABLE_PATH&quot; | grep -i 'VSTPlugin' | wc -l&#96;&#13;&#10;copyVST3=&#96;nm -g &quot;$CONFIGURATION_BUILD_DIR/$EXECUTABLE_PATH&quot; | grep -i 'GetPluginFactory' | wc -l&#96;&#13;&#10;copyRTAS=&#96;nm -g &quot;$CONFIGURATION_BUILD_DIR/$EXECUTABLE_PATH&quot; | grep -i 'CProcess' | wc -l&#96;&#13;&#10;copyAAX=&#96;nm -g &quot;$CONFIGURATION_BUILD_DIR/$EXECUTABLE_PATH&quot; | grep -i 'ACFStartup' | wc -l&#96;&#13;&#10;&#13;&#10;if [ $copyAU -gt 0 ]; then&#13;&#10;  echo &quot;Copying to AudioUnit folder...&quot;&#13;&#10;  AUDir=~/Library/Audio/Plug-Ins/Components&#13;&#10;  mkdir -p &quot;$AUDir&quot;&#13;&#10;  AU=$AUDir/$PRODUCT_NAME.component&#13;&#10;  if [ -d &quot;$AU&quot; ]; then &#13;&#10;    rm -r &quot;$AU&quot;&#13;&#10;  fi&#13;&#10;&#13;&#10;  cp -r &quot;$original&quot; &quot;$AU&quot;&#13;&#10;  sed -i &quot;&quot; -e 's/TDMwPTul/BNDLPTul/g' &quot;$AU/Contents/PkgInfo&quot;&#13;&#10;  sed -i &quot;&quot; -e 's/TDMw/BNDL/g' &quot;$AU/Contents/$INFOPLIST_FILE&quot;&#13;&#10;fi&#13;&#10;&#13;&#10;if [ $copyVST -gt 0 ]; then&#13;&#10;  echo &quot;Copying to VST folder...&quot;&#13;&#10;  VSTDir=~/Library/Audio/Plug-Ins/VST&#13;&#10;  mkdir -p &quot;$VSTDir&quot;&#13;&#10;  VST=$VSTDir/$PRODUCT_NAME.vst&#13;&#10;  if [ -d &quot;$VST&quot; ]; then &#13;&#10;    rm -r &quot;$VST&quot;&#13;&#10;  fi&#13;&#10;&#13;&#10;  cp -r &quot;$original&quot; &quot;$VST&quot;&#13;&#10;  sed -i &quot;&quot; -e 's/TDMwPTul/BNDLPTul/g' &quot;$VST/Contents/PkgInfo&quot;&#13;&#10;  sed -i &quot;&quot; -e 's/TDMw/BNDL/g' &quot;$VST/Contents/$INFOPLIST_FILE&quot;&#13;&#10;fi&#13;&#10;&#13;&#10;if [ $copyVST3 -gt 0 ]; then&#13;&#10;  echo &quot;Copying to VST3 folder...&quot;&#13;&#10;  VST3Dir=~/Library/Audio/Plug-Ins/VST3&#13;&#10;  mkdir -p &quot;$VST3Dir&quot;&#13;&#10;  VST3=$VST3Dir/$PRODUCT_NAME.vst3&#13;&#10;  if [ -d &quot;$VST3&quot; ]; then &#13;&#10;    rm -r &quot;$VST3&quot;&#13;&#10;  fi&#13;&#10;&#13;&#10;  cp -r &quot;$original&quot; &quot;$VST3&quot;&#13;&#10;  sed -i &quot;&quot; -e 's/TDMwPTul/BNDLPTul/g' &quot;$VST3/Contents/PkgInfo&quot;&#13;&#10;  sed -i &quot;&quot; -e 's/TDMw/BNDL/g' &quot;$VST3/Contents/$INFOPLIST_FILE&quot;&#13;&#10;fi&#13;&#10;&#13;&#10;if [ $copyRTAS -gt 0 ]; then&#13;&#10;  echo &quot;Copying to RTAS folder...&quot;&#13;&#10;  RTASDir=/Library/Application\ Support/Digidesign/Plug-Ins&#13;&#10;  if [ -d &quot;$RTASDir&quot; ]; then&#13;&#10;    RTAS=$RTASDir/$PRODUCT_NAME.dpm&#13;&#10;    if [ -d &quot;$RTAS&quot; ]; then&#13;&#10;      rm -r &quot;$RTAS&quot;&#13;&#10;    fi&#13;&#10;&#13;&#10;    cp -r &quot;$original&quot; &quot;$RTAS&quot;&#13;&#10;  fi&#13;&#10;fi&#13;&#10;&#13;&#10;if [ $copyAAX -gt 0 ]; then&#13;&#10;  echo &quot;Copying to AAX folder...&quot;&#13;&#10;&#13;&#10;  if [ -d &quot;/Applications/ProTools_3PDev/Plug-Ins&quot; ]; then&#13;&#10;    AAX1=&quot;/Applications/ProTools_3PDev/Plug-Ins/$PRODUCT_NAME.aaxplugin&quot;&#13;&#10;&#13;&#10;    if [ -d &quot;$AAX1&quot; ]; then&#13;&#10;      rm -r &quot;$AAX1&quot;&#13;&#10;    fi&#13;&#10;&#13;&#10;    cp -R -H &quot;$original&quot; &quot;$AAX1&quot;&#13;&#10;  fi&#13;&#10;&#13;&#10;  if [ -d &quot;/Library/Application Support/Avid/Audio/Plug-Ins&quot; ]; then&#13;&#10;    AAX2=&quot;/Library/Application Support/Avid/Audio/Plug-Ins/$PRODUCT_NAME.aaxplugin&quot;&#13;&#10;&#13;&#10;    if [ -d &quot;$AAX2&quot; ]; then&#13;&#10;      rm -r &quot;$AAX2&quot;&#13;&#10;    fi&#13;&#10;&#13;&#10;    cp -R -H &quot;$original&quot; &quot;$AAX2&quot;&#13;&#10;  fi&#13;&#10;fi&#13;&#10;"
+               vstFolder="/Applications/JUCE_old/code/VST3_SDK">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="delay"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="0" optimisation="3" targetName="delay"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../../Applications/JUCE_old/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>

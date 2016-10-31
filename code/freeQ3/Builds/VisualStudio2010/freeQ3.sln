@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{CDCB2D29-D462-FF59-77E2-8C678F4354FC}") = "freeQ3", "freeQ3.vcxproj", "{21696902-A2D4-2C95-88E6-78F278FD3882}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21696902-A2D4-2C95-88E6-78F278FD3882}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21696902-A2D4-2C95-88E6-78F278FD3882}.Debug|Win32.Build.0 = Debug|Win32
+		{21696902-A2D4-2C95-88E6-78F278FD3882}.Release|Win32.ActiveCfg = Release|Win32
+		{21696902-A2D4-2C95-88E6-78F278FD3882}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

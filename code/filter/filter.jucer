@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="isKdbA" name="filter" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="io.marcjones.filter" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="0" buildAU="1" buildRTAS="0" buildAAX="0"
+              pluginName="filter" pluginDesc="filter" pluginManufacturer="Jones Corp"
+              pluginManufacturerCode="mjIO" pluginCode="fLtr" pluginChannelConfigs=""
+              pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
+              pluginIsMidiEffectPlugin="0" pluginSilenceInIsSilenceOut="0"
+              pluginEditorRequiresKeys="0" pluginAUExportPrefix="filterAU"
+              pluginRTASCategory="" aaxIdentifier="com.yourcompany.filter"
+              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="4.1.0"
+              companyName="Jones Corp" companyWebsite="marcjones.io" companyEmail="contact@marcjones.io">
+  <MAINGROUP id="pecFHa" name="filter">
+    <GROUP id="{E4B4A1C2-80EF-7802-1E06-E6D00B5D94BE}" name="Source">
+      <GROUP id="{41CE6B31-1E7B-F09D-2C91-2842A04913E7}" name="provided">
+        <FILE id="UeVrlh" name="Mu45FilterCalc.cpp" compile="1" resource="0"
+              file="../../provided/Mu45FilterCalc.cpp"/>
+        <FILE id="W3vu48" name="Mu45FilterCalc.h" compile="0" resource="0"
+              file="../../provided/Mu45FilterCalc.h"/>
+        <FILE id="cQOZ21" name="Mu45LFO.cpp" compile="1" resource="0" file="../../provided/Mu45LFO.cpp"/>
+        <FILE id="dLQB7f" name="Mu45LFO.h" compile="0" resource="0" file="../../provided/Mu45LFO.h"/>
+        <FILE id="nXUttC" name="PluginParameter.h" compile="0" resource="0"
+              file="../../provided/PluginParameter.h"/>
+      </GROUP>
+      <GROUP id="{F06F782E-554E-6CA9-D769-10BED55959E3}" name="stk">
+        <GROUP id="{80B65413-4CA2-A295-2584-690AC79BE414}" name="include">
+          <FILE id="W3se8m" name="BiQuad.h" compile="0" resource="0" file="../../stk/include/BiQuad.h"/>
+          <FILE id="L3yWSY" name="Delay.h" compile="0" resource="0" file="../../stk/include/Delay.h"/>
+          <FILE id="QzrUzf" name="DelayA.h" compile="0" resource="0" file="../../stk/include/DelayA.h"/>
+          <FILE id="hQL0Ye" name="DelayL.h" compile="0" resource="0" file="../../stk/include/DelayL.h"/>
+          <FILE id="tFFIbn" name="Filter.h" compile="0" resource="0" file="../../stk/include/Filter.h"/>
+          <FILE id="WGzK3D" name="Fir.h" compile="0" resource="0" file="../../stk/include/Fir.h"/>
+          <FILE id="LKH3M4" name="FormSwep.h" compile="0" resource="0" file="../../stk/include/FormSwep.h"/>
+          <FILE id="vrliSN" name="Iir.h" compile="0" resource="0" file="../../stk/include/Iir.h"/>
+          <FILE id="aYsUrO" name="OnePole.h" compile="0" resource="0" file="../../stk/include/OnePole.h"/>
+          <FILE id="mSpvpw" name="OneZero.h" compile="0" resource="0" file="../../stk/include/OneZero.h"/>
+          <FILE id="IwNJhe" name="PoleZero.h" compile="0" resource="0" file="../../stk/include/PoleZero.h"/>
+          <FILE id="XCrwRF" name="Stk.h" compile="0" resource="0" file="../../stk/include/Stk.h"/>
+          <FILE id="ryh8fr" name="TapDelay.h" compile="0" resource="0" file="../../stk/include/TapDelay.h"/>
+          <FILE id="Mh5lne" name="TwoPole.h" compile="0" resource="0" file="../../stk/include/TwoPole.h"/>
+          <FILE id="EyCJZC" name="TwoZero.h" compile="0" resource="0" file="../../stk/include/TwoZero.h"/>
+        </GROUP>
+        <GROUP id="{0736D62C-828E-8C39-F18F-05639F638516}" name="src">
+          <FILE id="Qo5Bct" name="BiQuad.cpp" compile="1" resource="0" file="../../stk/src/BiQuad.cpp"/>
+          <FILE id="g3XawB" name="Delay.cpp" compile="1" resource="0" file="../../stk/src/Delay.cpp"/>
+          <FILE id="rgn4m6" name="DelayA.cpp" compile="1" resource="0" file="../../stk/src/DelayA.cpp"/>
+          <FILE id="rAR39Y" name="DelayL.cpp" compile="1" resource="0" file="../../stk/src/DelayL.cpp"/>
+          <FILE id="nwWB8X" name="Fir.cpp" compile="1" resource="0" file="../../stk/src/Fir.cpp"/>
+          <FILE id="KqKkWt" name="FormSwep.cpp" compile="1" resource="0" file="../../stk/src/FormSwep.cpp"/>
+          <FILE id="RsWEB9" name="Iir.cpp" compile="1" resource="0" file="../../stk/src/Iir.cpp"/>
+          <FILE id="zn8JeQ" name="OnePole.cpp" compile="1" resource="0" file="../../stk/src/OnePole.cpp"/>
+          <FILE id="oPQZ9L" name="OneZero.cpp" compile="1" resource="0" file="../../stk/src/OneZero.cpp"/>
+          <FILE id="vuTACJ" name="PoleZero.cpp" compile="1" resource="0" file="../../stk/src/PoleZero.cpp"/>
+          <FILE id="dUduGE" name="Stk.cpp" compile="1" resource="0" file="../../stk/src/Stk.cpp"/>
+          <FILE id="HpWClH" name="TapDelay.cpp" compile="1" resource="0" file="../../stk/src/TapDelay.cpp"/>
+          <FILE id="jyc4U1" name="TwoPole.cpp" compile="1" resource="0" file="../../stk/src/TwoPole.cpp"/>
+          <FILE id="gVujOe" name="TwoZero.cpp" compile="1" resource="0" file="../../stk/src/TwoZero.cpp"/>
+        </GROUP>
+      </GROUP>
+      <FILE id="J195RR" name="GUI.cpp" compile="1" resource="0" file="Source/GUI.cpp"/>
+      <FILE id="ulJWYS" name="GUI.h" compile="0" resource="0" file="Source/GUI.h"/>
+      <FILE id="VgWcSR" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="b2gDda" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="UpIeBT" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="F83yZy" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="filter"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="0" optimisation="3" targetName="filter"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../Applications/JUCE_old/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../../Applications/JUCE_old/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>
