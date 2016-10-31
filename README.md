@@ -1,6 +1,11 @@
 # plugin-suite
 Suite of freeware VST/AU plugins: 3-Band Equalizer (EQ3), Delay, Filter, &amp; Flanger) written in C++
 
+![alt tag]https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/freeq3.jpg
+![alt tag]https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/delay.jpeg
+![alt tag]https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/filter.jpeg
+![alt tag]https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/flange.jpeg
+
 ### about:
 Provided is an open source suite of digital audio processing tools: an EQ3 for attenuating frequencies in three ranges(los/mids/his), a flanger, a simple delay, and a filter that doubles as hi or lo pass. These effects were built atop the JUCE Frameworks, using Xcode & Stanford's Synthesis Toolkit (Lite version 4.5.1). Further, I used photoshop to make the static GUI, worked off of code from my professor Luke Dahl___LINK!___ (who provided an LFO wavetable and filter coefficient calculations), and used an abstract class of parameters by _ ___LINK!___.
 
