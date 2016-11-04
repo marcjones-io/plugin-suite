@@ -21,8 +21,7 @@ https://ccrma.stanford.edu/software/stk/
 
 __FONT LINK__
 
-
-![alt tag](https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/delay.jpeg)
+<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/delay.jpeg" width="48">
 ![alt tag](https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/filter.jpeg)
 ![alt tag](https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/flange.jpeg)
 ![alt tag](https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/freeq3.jpg)
