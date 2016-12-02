@@ -66,17 +66,12 @@ void DelayAudioProcessorEditor::resized() {
 
 void DelayAudioProcessorEditor::sliderValueChanged (Slider* sliderThatWasMoved) {
     PluginParameter* parameter = nullptr;
-    
-    if (sliderThatWasMoved == time_slider) {
+    if (sliderThatWasMoved == time_slider)
         parameter = processor.timeParam;
-    }
-    else if (sliderThatWasMoved == feedback_slider) {
+    else if (sliderThatWasMoved == feedback_slider)
         parameter = processor.fbParam;
-    }
-    else if (sliderThatWasMoved == drywet_slider) {
+    else if (sliderThatWasMoved == drywet_slider)
         parameter = processor.dryWetParam;
-    }
-    
     if (parameter != nullptr) {
         parameter->setValueNotifyingHost(parameter->calculateValue(sliderThatWasMoved->getValue()));
     }

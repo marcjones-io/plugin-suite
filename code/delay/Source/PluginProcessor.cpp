@@ -67,29 +67,31 @@ void DelayAudioProcessor::changeProgramName (int index, const String& newName) {
 //==============================================================================
 void DelayAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock) {
     fs = sampleRate;
-    fb=0;
+//    fb=0;
     dryGain = 1; wetGain = 0;
-    int s = calcSampsFromMS(999);
-    leftDelayLine.setMaximumDelay(s); //why do this try that
-    rightDelayLine.setMaximumDelay(s);
+    float sL = calcSampsFromMS(999);
+    float sR = calcSampsFromMS(999);
+    leftDelayLine.setMaximumDelay(sL);
+    rightDelayLine.setMaximumDelay(sR);
 }
 
 void DelayAudioProcessor::releaseResources() {
-    dryWetParam = nullptr;
-    fbParam = nullptr;
-    timeParam = nullptr;
 }
 
-int DelayAudioProcessor::calcSampsFromMS(int ms) {
+int DelayAudioProcessor::calcSampsFromMS(float ms) {
     return ms/1000*fs;
 }
 
 void DelayAudioProcessor::calcParams(){
     fb = .01*fbParam->getActualValue();
+    
+    float delaytimeL = timeParam->getActualValue();
+    float delaytimeR = timeParam->getActualValue();
+    leftDelayLine.setDelay(calcSampsFromMS(delaytimeL));
+    rightDelayLine.setDelay(calcSampsFromMS(delaytimeR));
+    
     wetGain = .01*dryWetParam->getActualValue();
-    int delaytime = timeParam->getActualValue();
-    leftDelayLine.setDelay(calcSampsFromMS(delaytime));
-    rightDelayLine.setDelay(calcSampsFromMS(delaytime));
+    dryGain = 1-wetGain;
 }
 
 void DelayAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages) {
@@ -104,10 +106,10 @@ void DelayAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& m
         tempOutL = leftDelayLine.nextOut();
         tempOutR = rightDelayLine.nextOut();
         
-        leftDelayLine.tick(wetGain * left[samp] + fb * tempOutL);
-        rightDelayLine.tick(wetGain * right[samp] + fb * tempOutR);
+        leftDelayLine.tick(left[samp] + fb * tempOutL);
+        rightDelayLine.tick(right[samp] + fb * tempOutR);
         
-        left[samp] = (dryGain * left[samp]) + (wetGain  * tempOutL);
+        left[samp] = (dryGain * left[samp]) + (wetGain * tempOutL);
         right[samp] = (dryGain * right[samp]) + (wetGain * tempOutR);
     }
 }

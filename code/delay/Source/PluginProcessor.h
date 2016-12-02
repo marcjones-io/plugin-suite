@@ -44,7 +44,7 @@ public:
 private:
     float fs, dryGain, wetGain, fb, tempOutL, tempOutR;
     void calcParams();
-    int calcSampsFromMS(int);
+    int calcSampsFromMS(float);
     stk::Delay rightDelayLine, leftDelayLine;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DelayAudioProcessor)
