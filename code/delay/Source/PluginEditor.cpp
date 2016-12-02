@@ -4,7 +4,7 @@
 
 DelayAudioProcessorEditor::DelayAudioProcessorEditor (DelayAudioProcessor& p)
 : AudioProcessorEditor (&p), processor (p) {
-    addAndMakeVisible (time_slider = new Slider ("Time Slider"));
+    time_slider = new Slider ("Time Slider");
     time_slider->setRange (1, 999, 1);
     time_slider->setSliderStyle (Slider::LinearBar);
     time_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
@@ -15,7 +15,7 @@ DelayAudioProcessorEditor::DelayAudioProcessorEditor (DelayAudioProcessor& p)
     time_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
     time_slider->addListener (this);
     
-    addAndMakeVisible (feedback_slider = new Slider ("Feedback Slider"));
+    feedback_slider = new Slider ("Feedback Slider");
     feedback_slider->setRange (0, 95, 1);
     feedback_slider->setSliderStyle (Slider::LinearBar);
     feedback_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
@@ -26,7 +26,7 @@ DelayAudioProcessorEditor::DelayAudioProcessorEditor (DelayAudioProcessor& p)
     feedback_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
     feedback_slider->addListener (this);
     
-    addAndMakeVisible (drywet_slider = new Slider ("DryWet Slider"));
+    drywet_slider = new Slider ("DryWet Slider");
     drywet_slider->setRange (0, 100, 1);
     drywet_slider->setSliderStyle (Slider::LinearBar);
     drywet_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
@@ -37,6 +37,8 @@ DelayAudioProcessorEditor::DelayAudioProcessorEditor (DelayAudioProcessor& p)
     drywet_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
     drywet_slider->addListener (this);
     
+    addAndMakeVisible (time_slider); addAndMakeVisible (feedback_slider); addAndMakeVisible (drywet_slider);
+
     background = GUI().cachedImage_delay_jpg_1;
     
     setSize (195, 300);

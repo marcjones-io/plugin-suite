@@ -10,34 +10,40 @@
 FreeQ3AudioProcessorEditor::FreeQ3AudioProcessorEditor (FreeQ3AudioProcessor& p):
 AudioProcessorEditor (&p), processor (p) {
     
-    addAndMakeVisible(test = new Slider("test"));
+    test = new Slider("test");
     test->setSliderStyle(Slider::LinearBar);
     test->setRange(-30, 30, .1);
     test->setTextBoxStyle (Slider::TextBoxBelow, true, 80, 20);
+    addAndMakeVisible(test);
+    
 
-    addAndMakeVisible (lo_slider = new Slider ("lo slider"));
+    lo_slider = new Slider ("lo slider");
     lo_slider->setRange (-15, 6, 0.1);
     lo_slider->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
     lo_slider->setTextBoxStyle (Slider::NoTextBox, false, 80, 20);
     lo_slider->setColour (Slider::rotarySliderFillColourId, Colour (0x7fffffff));
     lo_slider->setColour (Slider::rotarySliderOutlineColourId, Colour (0x66ffffff));
     lo_slider->addListener (this);
+    addAndMakeVisible (lo_slider);
     
-    addAndMakeVisible (mid_slider = new Slider ("mid slider"));
+    mid_slider = new Slider ("mid slider");
     mid_slider->setRange (-15, 6, 0.1);
     mid_slider->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
     mid_slider->setTextBoxStyle (Slider::NoTextBox, false, 80, 20);
     mid_slider->setColour (Slider::rotarySliderFillColourId, Colour (0x7fffffff));
     mid_slider->setColour (Slider::rotarySliderOutlineColourId, Colour (0x66ffffff));
     mid_slider->addListener (this);
+    addAndMakeVisible(mid_slider);
     
-    addAndMakeVisible (hi_slider = new Slider ("hi slider"));
+    hi_slider = new Slider ("hi slider");
     hi_slider->setRange (-15, 6, 0.1);
     hi_slider->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
     hi_slider->setTextBoxStyle (Slider::NoTextBox, false, 80, 20);
     hi_slider->setColour (Slider::rotarySliderFillColourId, Colour (0x7fffffff));
     hi_slider->setColour (Slider::rotarySliderOutlineColourId, Colour (0x66ffffff));
     hi_slider->addListener (this);
+    addAndMakeVisible (hi_slider);
+    
     
     background = GUI().cachedImage_freeq3_jpg_1;
     

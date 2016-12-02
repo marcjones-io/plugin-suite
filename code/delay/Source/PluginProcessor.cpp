@@ -3,7 +3,9 @@
 
 
 //==============================================================================
-DelayAudioProcessor::DelayAudioProcessor() {
+DelayAudioProcessor::DelayAudioProcessor()
+{
+    
     dryWetParam = new PluginParameter("wetDry", 0, 0, 100, "wet_dry_pct", "%");
     fbParam = new PluginParameter("feedback", 0, 0, 95, "feedback_pct", "%");
     timeParam = new PluginParameter("delayTime", 1, 1, 999, "delayTimeInMS", "ms");

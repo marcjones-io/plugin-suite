@@ -27,131 +27,26 @@
 //[/MiscUserDefs]
 
 //==============================================================================
-GUI::GUI ()
-{
-    //[Constructor_pre] You can add your own custom stuff here..
-    //[/Constructor_pre]
-
-    addAndMakeVisible (time_slider = new Slider ("Time Slider"));
-    time_slider->setRange (0, 999, 1);
-    time_slider->setSliderStyle (Slider::LinearBar);
-    time_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
-    time_slider->setColour (Slider::thumbColourId, Colours::white);
-    time_slider->setColour (Slider::trackColourId, Colours::white);
-    time_slider->setColour (Slider::textBoxTextColourId, Colours::white);
-    time_slider->setColour (Slider::textBoxBackgroundColourId, Colour (0x00ffffff));
-    time_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
-    time_slider->addListener (this);
-
-    addAndMakeVisible (feedback_slider = new Slider ("Feedback Slider"));
-    feedback_slider->setRange (0, 100, 1);
-    feedback_slider->setSliderStyle (Slider::LinearBar);
-    feedback_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
-    feedback_slider->setColour (Slider::thumbColourId, Colours::white);
-    feedback_slider->setColour (Slider::trackColourId, Colours::white);
-    feedback_slider->setColour (Slider::textBoxTextColourId, Colours::white);
-    feedback_slider->setColour (Slider::textBoxBackgroundColourId, Colour (0x00ffffff));
-    feedback_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
-    feedback_slider->addListener (this);
-
-    addAndMakeVisible (drywet_slider = new Slider ("DryWey Slider"));
-    drywet_slider->setRange (0, 100, 1);
-    drywet_slider->setSliderStyle (Slider::LinearBar);
-    drywet_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
-    drywet_slider->setColour (Slider::thumbColourId, Colours::white);
-    drywet_slider->setColour (Slider::trackColourId, Colours::white);
-    drywet_slider->setColour (Slider::textBoxTextColourId, Colours::white);
-    drywet_slider->setColour (Slider::textBoxBackgroundColourId, Colour (0x00ffffff));
-    drywet_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
-    drywet_slider->addListener (this);
-
+GUI::GUI (){
     cachedImage_delay_jpg_1 = ImageCache::getFromMemory (delay_jpg, delay_jpgSize);
-
-    //[UserPreSize]
-    //[/UserPreSize]
-
     setSize (195, 300);
-
-
-    //[Constructor] You can add your own custom stuff here..
-    //[/Constructor]
 }
 
-GUI::~GUI()
-{
-    //[Destructor_pre]. You can add your own custom destruction code here..
-    //[/Destructor_pre]
-
-    time_slider = nullptr;
-    feedback_slider = nullptr;
-    drywet_slider = nullptr;
-
-
-    //[Destructor]. You can add your own custom destruction code here..
-    //[/Destructor]
-}
+GUI::~GUI(){}
 
 //==============================================================================
-void GUI::paint (Graphics& g)
-{
-    //[UserPrePaint] Add your own custom painting code here..
-    //[/UserPrePaint]
-
+void GUI::paint (Graphics& g){
     g.fillAll (Colours::white);
-
     g.setColour (Colours::black);
     g.drawImage (cachedImage_delay_jpg_1,
                  0, 0, 195, 300,
                  0, 0, cachedImage_delay_jpg_1.getWidth(), cachedImage_delay_jpg_1.getHeight());
-
-    //[UserPaint] Add your own custom painting code here..
-    //[/UserPaint]
 }
 
-void GUI::resized()
-{
-    //[UserPreResize] Add your own custom resize code here..
-    //[/UserPreResize]
+void GUI::resized(){}
 
-    time_slider->setBounds (24, 104, 150, 24);
-    feedback_slider->setBounds (24, 160, 150, 24);
-    drywet_slider->setBounds (24, 224, 150, 24);
-    //[UserResized] Add your own custom resize handling here..
-    //[/UserResized]
-}
+void GUI::sliderValueChanged (Slider* sliderThatWasMoved){}
 
-void GUI::sliderValueChanged (Slider* sliderThatWasMoved)
-{
-    //[UsersliderValueChanged_Pre]
-    //[/UsersliderValueChanged_Pre]
-
-    if (sliderThatWasMoved == time_slider)
-    {
-        //[UserSliderCode_time_slider] -- add your slider handling code here..
-        //[/UserSliderCode_time_slider]
-    }
-    else if (sliderThatWasMoved == feedback_slider)
-    {
-        //[UserSliderCode_feedback_slider] -- add your slider handling code here..
-        //[/UserSliderCode_feedback_slider]
-    }
-    else if (sliderThatWasMoved == drywet_slider)
-    {
-        //[UserSliderCode_drywet_slider] -- add your slider handling code here..
-        //[/UserSliderCode_drywet_slider]
-    }
-
-    //[UsersliderValueChanged_Post]
-    //[/UsersliderValueChanged_Post]
-}
-
-
-
-//[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
-//[/MiscUserCode]
-
-
-//==============================================================================
 #if 0
 /*  -- Introjucer information section --
 
