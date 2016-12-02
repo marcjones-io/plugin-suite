@@ -1,6 +1,12 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
+/**
+        TODO
+    ensure decible to linear conversion is being applied
+ */
+
+
 FreeQ3AudioProcessor::FreeQ3AudioProcessor() {
     hiGain = new PluginParameter("hiGain", 0, -40, 6, "hiGain", "db");
     midGain = new PluginParameter("midGain", 0, -40, 6, "midGain", "db");
@@ -70,7 +76,7 @@ void FreeQ3AudioProcessor::calcParams(){
     Mu45FilterCalc::calcCoeffsLowShelf(loCoeffs, 250, loGain->getActualValue(), fs);
     
     float midCoeffs[5];
-    Mu45FilterCalc::calcCoeffsPeak(loCoeffs, 1375, midGain->getActualValue(), .8 /** maybe also .1 **/, fs);
+    Mu45FilterCalc::calcCoeffsPeak(midCoeffs, 1375, midGain->getActualValue(), .8 /** maybe also .1 **/, fs);
     
     float hiCoeffs[5];
     Mu45FilterCalc::calcCoeffsHighShelf(hiCoeffs, 2500, hiGain->getActualValue(), fs);
@@ -94,13 +100,12 @@ void FreeQ3AudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& 
     float* right = buffer.getWritePointer (1);
     
     for (int samp = 0; samp < buffer.getNumSamples(); samp++) {
-        
         left[samp] =  loFilterL.tick(left[samp]);
         right[samp] = loFilterR.tick(right[samp]);
         
         left[samp] = midFilterL.tick(left[samp]);
         right[samp] = midFilterR.tick(right[samp]);
-    
+
         left[samp] =  hiFilterL.tick(left[samp]);
         right[samp] = hiFilterR.tick(right[samp]);
     }

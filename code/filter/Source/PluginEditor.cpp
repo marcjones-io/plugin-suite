@@ -15,11 +15,13 @@ FilterAudioProcessorEditor::FilterAudioProcessorEditor (FilterAudioProcessor& p)
     freqSlider->setRange (0, 22000, 1);
     freqSlider->setSliderStyle (Slider::Rotary);
     freqSlider->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
+    freqSlider->setTextValueSuffix(" Hz");
     freqSlider->setColour (Slider::rotarySliderFillColourId, Colour (0x7fffffff));
     freqSlider->setColour (Slider::rotarySliderOutlineColourId, Colour (0x66ffffff));
     freqSlider->setColour (Slider::textBoxTextColourId, Colours::white);
     freqSlider->setColour (Slider::textBoxBackgroundColourId, Colour (0x00ffffff));
     freqSlider->setColour (Slider::textBoxOutlineColourId, Colour (0x00808080));
+    freqSlider->setSkewFactor(.4);
     freqSlider->addListener (this);
 
     background = GUI().cachedImage_filter_jpg_1;

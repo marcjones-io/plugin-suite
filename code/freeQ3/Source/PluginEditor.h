@@ -22,7 +22,7 @@ private:
 
     Image background;
     
-    ScopedPointer<Slider> test;
+//    ScopedPointer<Slider> test;
     
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (FreeQ3AudioProcessorEditor)
