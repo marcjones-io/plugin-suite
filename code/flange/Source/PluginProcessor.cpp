@@ -61,7 +61,7 @@ void FlangeAudioProcessor::changeProgramName (int index, const String& newName) 
 }
 
 
-int FlangeAudioProcessor::calcSampsFromMS(int ms) {
+int FlangeAudioProcessor::calcSampsFromMS(float ms) {
     return ms/1000*fs;
 }
 

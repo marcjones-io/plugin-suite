@@ -45,7 +45,7 @@ private:
     stk::DelayL rightDelayLine, leftDelayLine;
     float fs;
     void calcParams();
-    int calcSampsFromMS(int ms);
+    int calcSampsFromMS(float ms);
     void calcDelays();
  
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (FlangeAudioProcessor)

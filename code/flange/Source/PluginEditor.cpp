@@ -1,9 +1,8 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-FlangeAudioProcessorEditor::FlangeAudioProcessorEditor (FlangeAudioProcessor& p)
-    : AudioProcessorEditor (&p), processor (p) {
-    addAndMakeVisible (time_slider = new Slider ("Time Slider"));
+FlangeAudioProcessorEditor::FlangeAudioProcessorEditor (FlangeAudioProcessor& p) : AudioProcessorEditor (&p), processor (p) {
+    time_slider = new Slider ("Time Slider");
     time_slider->setRange (0.1, 7, .1);
     time_slider->setSliderStyle (Slider::LinearBar);
     time_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
@@ -14,7 +13,7 @@ FlangeAudioProcessorEditor::FlangeAudioProcessorEditor (FlangeAudioProcessor& p)
     time_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
     time_slider->addListener (this);
     
-    addAndMakeVisible (lfo_slider = new Slider ("LFO Slider"));
+    lfo_slider = new Slider ("LFO Slider");
     lfo_slider->setRange (0.01, 10, .01);
     lfo_slider->setSliderStyle (Slider::LinearBar);
     lfo_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
@@ -25,7 +24,7 @@ FlangeAudioProcessorEditor::FlangeAudioProcessorEditor (FlangeAudioProcessor& p)
     lfo_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
     lfo_slider->addListener (this);
     
-    addAndMakeVisible (drywet_slider = new Slider ("DryWet Slider"));
+    drywet_slider = new Slider ("DryWet Slider");
     drywet_slider->setRange (0, 100, 1);
     drywet_slider->setSliderStyle (Slider::LinearBar);
     drywet_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 40, 20);
@@ -35,6 +34,8 @@ FlangeAudioProcessorEditor::FlangeAudioProcessorEditor (FlangeAudioProcessor& p)
     drywet_slider->setColour (Slider::textBoxBackgroundColourId, Colour (0x00ffffff));
     drywet_slider->setColour (Slider::textBoxOutlineColourId, Colour (0x55ffffff));
     drywet_slider->addListener (this);
+
+    addAndMakeVisible (drywet_slider);    addAndMakeVisible (time_slider);    addAndMakeVisible (lfo_slider);
     
     background = GUI().cachedImage_flange_jpg_1;
     
@@ -60,16 +61,12 @@ void FlangeAudioProcessorEditor::resized() {
 
 void FlangeAudioProcessorEditor::sliderValueChanged (Slider* slider) {
     PluginParameter* parameter = nullptr;
-    
-    if (slider == time_slider) {
+    if (slider == time_slider)
         parameter = processor.delayParam;
-    }
-    else if (slider == lfo_slider) {
+    else if (slider == lfo_slider)
         parameter = processor.lfoFreqParam;
-    }
-    else if (slider == drywet_slider) {
+    else if (slider == drywet_slider)
         parameter = processor.dryWetParam;
-    }
     
     if (parameter != nullptr) {
         parameter->setValueNotifyingHost(parameter->calculateValue(slider->getValue()));
