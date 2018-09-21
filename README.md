@@ -19,7 +19,7 @@ https://ccrma.stanford.edu/software/stk/
 Font "Retro" made by Andre Jotha: 
 http://www.dafont.com/retro.font
 
-<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/delay.jpeg" width="200">
-<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/filter.jpeg" width="200">
-<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/flange.jpeg" width="200">
-<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/freeq3.jpg" width="600">
+!<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/delay.jpeg" width="200"> 
+!<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/filter.jpeg" width="200">
+!<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/flange.jpeg" width="200">
+<img src="https://github.com/marcjones-io/pluginsuite/blob/master/design/screenshots/freeq3.jpg" width="650">
