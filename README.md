@@ -15,7 +15,9 @@ Place the *.vst or *.au file in the respective system plugin's folder. The plug-
 ### notes:
 For more information on the JUCE framework:
 https://www.juce.com/features
+
 For more information on the Stanford Synthesis ToolKit:
 https://ccrma.stanford.edu/software/stk/
+
 Font "Retro" made by Andre Jotha: 
 http://www.dafont.com/retro.font
